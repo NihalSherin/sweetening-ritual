@@ -182,22 +182,21 @@ body {
 .details-card {
     background: var(--card-bg);
     backdrop-filter: blur(10px);
-    border: 1px solid var(--border-color);
+    border: none;
     border-radius: 16px;
     display: flex;
-    justify-content: space-between;
-    padding: 20px 10px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 25px 20px;
     width: 100%;
     margin-bottom: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.03);
 }
 
 .detail-item {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 0 5px;
 }
 
 .detail-item i {
@@ -231,10 +230,11 @@ body {
     margin-top: 2px;
 }
 
-.vertical-divider {
-    width: 1px;
+.horizontal-divider {
+    height: 1px;
+    width: 50%;
     background-color: var(--border-color);
-    height: auto;
+    margin: 5px auto;
 }
 
 /* Action Buttons */
