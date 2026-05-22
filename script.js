@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Set the target date: 24 MAY 2026 07:00 PM
-    const targetDate = new Date('May 24, 2026 19:00:00').getTime();
+    // Set the target date: 27 MAY 2026 07:00 PM
+    const targetDate = new Date('May 27, 2026 19:00:00').getTime();
 
     // DOM Elements
     const daysEl = document.getElementById('days');
@@ -39,6 +39,18 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Initial call to prevent delay
     updateCountdown();
+
+    // Entrance Gate logic
+    const gateBtn = document.getElementById('open-gate-btn');
+    const entranceGate = document.getElementById('entrance-gate');
+    
+    if (gateBtn) {
+        gateBtn.addEventListener('click', () => {
+            entranceGate.classList.add('opened');
+            document.body.classList.remove('gate-active');
+            document.getElementById('app-container').classList.remove('gate-active');
+        });
+    }
 
     // Add interactivity to nav items
     const navItems = document.querySelectorAll('.nav-item');

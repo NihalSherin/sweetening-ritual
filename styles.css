@@ -19,28 +19,35 @@
 }
 
 body {
-    background-color: var(--bg-color);
-    background-image: url('assets/wedding_bg.png');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: var(--text-color);
+    background-color: #f9f9f9;
     font-family: var(--font-sans);
-    line-height: 1.5;
+    color: var(--text-color);
     -webkit-font-smoothing: antialiased;
-    display: flex;
-    justify-content: center;
+}
+
+body.gate-active {
+    overflow: hidden;
 }
 
 /* Mobile App Container Layout */
 .app-container {
     width: 100%;
-    max-width: 480px; /* Mobile width constraint */
+    max-width: 480px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    background-image: linear-gradient(to bottom, rgba(253, 250, 243, 0.95) 0%, rgba(253, 250, 243, 0.85) 100%), url('assets/wedding_bg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     min-height: 100vh;
-    background: linear-gradient(to bottom, rgba(252, 251, 247, 0.9) 0%, rgba(252, 251, 247, 0.7) 100%);
+    box-shadow: 0 0 40px rgba(0,0,0,0.15);
     position: relative;
-    box-shadow: 0 0 40px rgba(0,0,0,0.05);
     overflow-x: hidden;
+}
+
+.app-container.gate-active {
+    height: 100vh;
+    overflow: hidden;
 }
 
 /* Top Bar */
@@ -159,23 +166,18 @@ body {
 /* Center Image */
 .center-image {
     width: 100%;
-    max-width: 350px;
-    margin: 10px 0 30px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 30px;
     position: relative;
 }
 
 .center-image img {
     width: 100%;
     height: auto;
-    filter: drop-shadow(0 15px 25px rgba(0,0,0,0.1));
-    border-radius: 50%;
-    animation: float 6s ease-in-out infinite;
-}
-
-@keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0px); }
+    max-width: 320px;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
 /* Details Card */
@@ -391,5 +393,97 @@ body {
 }
 
 .nav-item.active {
-    color: var(--primary-color);
+    color: var(--accent-color);
 }
+
+/* Entrance Gate */
+.entrance-gate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    pointer-events: auto;
+    transition: visibility 2s ease;
+    border-radius: inherit;
+}
+
+.entrance-gate.opened {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.gate-left, .gate-right {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url('assets/floral_gate_bg.png');
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    transition: transform 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1;
+}
+
+.gate-left {
+    left: 0;
+    background-position: left center;
+}
+
+.gate-right {
+    right: 0;
+    background-position: right center;
+}
+
+.entrance-gate.opened .gate-left {
+    transform: translateX(-100%);
+}
+
+.entrance-gate.opened .gate-right {
+    transform: translateX(100%);
+}
+
+.gate-content {
+    position: relative;
+    z-index: 2;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.entrance-gate.opened .gate-content {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.open-gate-btn {
+    background-color: #8da4be;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 0 0 4px #8da4be, 0 10px 30px rgba(0,0,0,0.3);
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    font-size: 16px;
+    font-family: 'Chilanka', cursive;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    gap: 4px;
+    line-height: 1.2;
+    transition: transform 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.open-gate-btn:active {
+    transform: scale(0.95);
+}
+
