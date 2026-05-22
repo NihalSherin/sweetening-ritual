@@ -1,10 +1,10 @@
 :root {
-    --primary-color: #3b4c31; /* Dark Olive Green */
-    --accent-color: #a89467; /* Soft Gold/Brown */
-    --bg-color: #fcfbf7; /* Very light cream */
-    --card-bg: rgba(255, 255, 255, 0.6);
-    --text-color: #2c3327;
-    --border-color: rgba(168, 148, 103, 0.4);
+    --primary-color: #7b1e23; /* Rich Maroon */
+    --accent-color: #c99b3b; /* Festive Gold */
+    --bg-color: #fdfaf3; /* Warm cream */
+    --card-bg: rgba(255, 255, 255, 0.7);
+    --text-color: #331618;
+    --border-color: rgba(201, 155, 59, 0.4);
     
     --font-serif: 'Playfair Display', serif;
     --font-script: 'Great Vibes', cursive;
@@ -20,7 +20,7 @@
 
 body {
     background-color: var(--bg-color);
-    background-image: url('assets/watercolor_bg.png');
+    background-image: url('assets/wedding_bg.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
