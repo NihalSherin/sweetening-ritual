@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mathuramvepp Function</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600&family=Noto+Serif+Tamil:wght@400;500&family=Noto+Serif+Malayalam:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <div class="app-container">
+
+
+        <!-- Main Content area -->
+        <main class="main-content">
+            
+            <div class="invitation-text">
+                <p class="parent-names" style="font-family: var(--font-serif); color: var(--primary-color); font-weight: 600; font-size: 16px; margin-bottom: 5px;">Mrs. Shiny George & Mr. P. P. George</p>
+                <p class="address-text" style="font-size: 11px; color: #555; line-height: 1.4; margin-bottom: 15px;">Pothanattu (H), Puttumanoor,<br>Puthencruz P. O., Ernakulam Dist.</p>
+                
+                <p class="invite-msg" style="font-size: 12px; color: var(--primary-color); line-height: 1.6; margin-bottom: 15px; max-width: 300px; margin-left: auto; margin-right: auto;">
+                    cordially invite your esteemed presence,<br>blessings, and prayers along with your family<br>for the auspicious occasion of the
+                </p>
+                
+                <div class="divider">
+                    <i class="ph ph-plant"></i>
+                </div>
+
+                <h1 class="title" style="font-family: 'Noto Serif Malayalam', serif; font-size: 30px; line-height: 1.3; margin-bottom: 10px;">ജൂബിമോൾക്ക് മധുരം കൊടുക്കട്ടെ ???</h1>
+                <p class="subtitle" style="margin-bottom: 5px;">(Mathuramvepp Ceremony)</p>
+                
+                <p class="subtitle" style="margin-top: 15px; margin-bottom: 5px;">of our beloved daughter</p>
+                <h2 class="script-title" style="font-family: var(--font-script); font-size: 46px; color: var(--primary-color); font-weight: 400; margin-top: 0; line-height: 1;">Jubymol George</h2>
+            </div>
+
+            <div class="center-image" style="margin: 20px 0;">
+                <img src="assets/center_plate.png" alt="Mathuramvepp Elements - Neem, Jaggery, Jasmine">
+            </div>
+
+            <!-- Details Card -->
+            <div class="details-card">
+                <div class="detail-item">
+                    <i class="ph ph-calendar-blank"></i>
+                    <span class="detail-label">DATE</span>
+                    <span class="detail-value">24 MAY 2026</span>
+                    <span class="detail-sub">SUNDAY</span>
+                </div>
+                <div class="vertical-divider"></div>
+                <div class="detail-item">
+                    <i class="ph ph-clock"></i>
+                    <span class="detail-label">TIME</span>
+                    <span class="detail-value">07:00 PM</span>
+                    <span class="detail-sub">ONWARDS</span>
+                </div>
+                <div class="vertical-divider"></div>
+                <div class="detail-item" style="flex: 1.5;">
+                    <i class="ph ph-map-pin"></i>
+                    <span class="detail-label">VENUE</span>
+                    <span class="detail-value text-sm" style="font-size: 11px;">Pothanattu House</span>
+                    <span class="detail-sub text-sm" style="font-size: 9px;">Puttumanoor, Puthencruz P.O.</span>
+                </div>
+            </div>
+
+            <button class="action-btn">
+                <i class="ph ph-map-trifold"></i>
+                VIEW LOCATION
+            </button>
+
+            <!-- Quote Section -->
+            <section class="about-section" style="margin-top: 20px;">
+                <div class="heart-icon"><i class="ph-fill ph-heart"></i></div>
+                <p class="about-text" style="font-family: var(--font-serif); font-size: 16px; font-style: italic; margin-bottom: 15px;">
+                    "Sweet moments become memorable<br>when shared with loved ones."
+                </p>
+                
+                <p class="subtitle" style="font-size: 11px; margin-bottom: 5px;">With Love & Prayers</p>
+                <h3 style="font-family: var(--font-serif); color: var(--primary-color); font-size: 18px; margin-bottom: 15px;">George Family</h3>
+                
+                <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #555; background: rgba(0,0,0,0.03); padding: 8px 15px; border-radius: 20px;">
+                    <i class="ph-fill ph-phone"></i>
+                    <span>Contact : 8075908991</span>
+                </div>
+            </section>
+
+            <!-- Countdown Section -->
+            <section class="countdown-section">
+                <h3 class="countdown-title">COUNTDOWN TO OUR SPECIAL DAY</h3>
+                <div class="heart-icon"><i class="ph-fill ph-heart"></i></div>
+                
+                <div class="countdown-timer">
+                    <div class="time-block">
+                        <span class="time-value" id="days">15</span>
+                        <span class="time-label">DAYS</span>
+                    </div>
+                    <div class="vertical-divider"></div>
+                    <div class="time-block">
+                        <span class="time-value" id="hours">08</span>
+                        <span class="time-label">HOURS</span>
+                    </div>
+                    <div class="vertical-divider"></div>
+                    <div class="time-block">
+                        <span class="time-value" id="minutes">45</span>
+                        <span class="time-label">MINUTES</span>
+                    </div>
+                    <div class="vertical-divider"></div>
+                    <div class="time-block">
+                        <span class="time-value" id="seconds">32</span>
+                        <span class="time-label">SECONDS</span>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Padding for bottom nav -->
+            <div style="height: 80px;"></div>
+        </main>
+
+        <!-- Bottom Navigation -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item">
+                <i class="ph ph-map-pin"></i>
+                <span>LOCATION</span>
+            </a>
+            <a href="#" class="nav-item" id="audio-toggle-nav">
+                <i class="ph ph-speaker-high"></i>
+                <span>AUDIO</span>
+            </a>
+            <a href="tel:8075908991" class="nav-item">
+                <i class="ph ph-phone"></i>
+                <span>CALL</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
