@@ -44,11 +44,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const gateBtn = document.getElementById('open-gate-btn');
     const entranceGate = document.getElementById('entrance-gate');
     
+    const bgMusic = document.getElementById('bg-music');
+
     if (gateBtn) {
         gateBtn.addEventListener('click', () => {
             entranceGate.classList.add('opened');
             document.body.classList.remove('gate-active');
             document.getElementById('app-container').classList.remove('gate-active');
+            
+            // Try playing the audio after user interaction
+            if (bgMusic) {
+                bgMusic.play().catch(error => {
+                    console.log('Audio autoplay prevented by browser:', error);
+                });
+            }
         });
     }
 
@@ -70,8 +79,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 const icon = item.querySelector('i');
                 if (audioPlaying) {
                     icon.className = 'ph ph-speaker-high';
+                    if (bgMusic) bgMusic.play();
                 } else {
                     icon.className = 'ph ph-speaker-slash';
+                    if (bgMusic) bgMusic.pause();
                 }
                 return;
             }
